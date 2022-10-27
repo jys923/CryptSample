@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesSample", "AesSample\AesSample.csproj", "{B3D2BC47-47DE-4151-BEF2-24329046617B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleDESSample", "TripleDESSample\TripleDESSample.csproj", "{9019D358-32E0-4743-B58C-38B78513908A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3D2BC47-47DE-4151-BEF2-24329046617B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D2BC47-47DE-4151-BEF2-24329046617B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D2BC47-47DE-4151-BEF2-24329046617B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D2BC47-47DE-4151-BEF2-24329046617B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9019D358-32E0-4743-B58C-38B78513908A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9019D358-32E0-4743-B58C-38B78513908A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9019D358-32E0-4743-B58C-38B78513908A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9019D358-32E0-4743-B58C-38B78513908A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48EA2745-9ABB-458B-B739-4990A80D963A}
+	EndGlobalSection
+EndGlobal
