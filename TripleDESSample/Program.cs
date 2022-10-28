@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define TEST_ENV
+//#define PROD_ENV
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +44,22 @@ namespace TripleDESSample
             tripleDESSample.Apply3DES2(ori);
             Console.ReadLine();
         }
+        
+    }
+
+    class TripleDESSample
+    {
+        byte[] key = {
+                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+            };
+
+        byte[] iv = {
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            };
+
+#if (TEST_ENV)
         public static void Test()
         {
             byte[] Key = new byte[16] { 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };
@@ -62,21 +81,7 @@ namespace TripleDESSample
 
             Console.WriteLine("result:"+Convert.ToBase64String(result));
         }
-    }
 
-    
-
-    class TripleDESSample
-    {
-        byte[] key = {
-                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-                0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-            };
-
-        byte[] iv = {
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            };
         public byte[] Encrypt3(byte[] bytes)
         {
             if (bytes == null || bytes.Length < 1)
@@ -129,6 +134,9 @@ namespace TripleDESSample
 
             return encrypted;
         }
+
+#else
+#endif
 
         public void Apply3DES2(string raw)
         {
